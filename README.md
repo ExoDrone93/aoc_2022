@@ -1,1 +1,1 @@
-# aoc_2022
+# Repo for advent of code event of 2022
