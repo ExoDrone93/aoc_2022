@@ -93,7 +93,7 @@ const totalPoints2 = (array) => {
         switch (myHand) {
           case 'X': //lose rock
             total += 1
-          break;
+            break;
           case 'Y': //draw paper
             total += 5
             break;
