@@ -22,24 +22,24 @@ function chunk(items) {
   const origianlCount = getAllIndexes(original, 0).length;
   for (let index = 0; index < origianlCount; index++) {
     let pushes = items.splice(0, items.indexOf(0) + 1);
-    push = pushes.pop()
+    push = pushes.pop();
     chunks.push(
       pushes
-    )
-  }
-  return chunks
-}
+    );
+  };
+  return chunks;
+};
 
 const afterpush = chunk(original).map(
   x => x.reduce((partialSum, a) => partialSum + a, 0)
-)
+);
 
 const sortedArr = afterpush.sort(function(a, b) {
   return a - b;
 }).reverse();
 
 //part1
-console.log(sortedArr[0])
+console.log(sortedArr[0]);
 
 //part2
-console.log(sortedArr[0]+sortedArr[1]+sortedArr[2])
+console.log(sortedArr[0]+sortedArr[1]+sortedArr[2]);
