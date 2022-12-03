@@ -2,7 +2,7 @@ const { readFileSync } = require('fs');
 
 const readFile = () => {
   const contents = readFileSync('day2/input.txt', 'utf-8');
-  const arr = contents.split(/\r?\n/).map(x => x.split(" "));
+  const arr = contents.split(/\r?\n/).map(x => x.split(' '));
   return arr;
 };
 
@@ -19,9 +19,9 @@ const results = {
   C: { X: 6, Y: 0, Z: 3 },
 };
 
-const sum = (a, b) => a + b
+const sum = (a, b) => a + b;
 
-const matches = readFile()
+const matches = readFile();
 
 console.log(
   matches.map(([a, b]) => results[a][b] + myValues[b]).reduce(sum)
