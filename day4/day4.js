@@ -23,6 +23,7 @@ const shiftTotalOverlap = (array) => {
 console.log(shiftTotalOverlap(original));
 
 //part2
+// more elegant solution is an if like: Number(a[0]) <= Number(a[3]) && Number(a[1]) >= Number(a[2])
 const shiftOverlap = (array) => {
   let overlapTotal = 0;
   array.map((a) => {
