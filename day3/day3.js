@@ -45,7 +45,7 @@ const sum = (a, b) => a + b;
 //using charCode
 console.log(common(twoPocket).map(x => x.search(/[a-z]/) != -1 ? x.charCodeAt(0) - 96 : x.charCodeAt(0) - 38).reduce(sum));
 
-//using predefinied dictionory of letter values
+//using predefinied dictionary of letter values
 console.log(common(twoPocket).map(x => aplhabetValues[x]).reduce(sum));
 
 
@@ -80,5 +80,5 @@ const badges = (array) => {
 //using charCode
 console.log(badges(elfsByGroup).map(x => x.search(/[a-z]/) != -1 ? x.charCodeAt(0) - 96 : x.charCodeAt(0) - 38).reduce(sum));
 
-//using predefinied dictionory of letter values
+//using predefinied dictionary of letter values
 console.log(badges(elfsByGroup).map(x => aplhabetValues[x]).reduce(sum));
