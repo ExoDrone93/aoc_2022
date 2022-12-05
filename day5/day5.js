@@ -81,4 +81,4 @@ const workingWith9001 = (piles, moves) => {
   return piles;
 };
 
-console.log('part1: ' + workingWith9001(for9001, manualForWork).map(x => x.pop()).join(''));
+console.log('part2: ' + workingWith9001(for9001, manualForWork).map(x => x.pop()).join(''));
