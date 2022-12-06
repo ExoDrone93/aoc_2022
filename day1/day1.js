@@ -1,12 +1,6 @@
-const { readFileSync } = require('fs');
+const { readInstructions } = require('../Utils/readFile.js');
 
-const readFile = () => {
-  const contents = readFileSync('day1/input.txt', 'utf-8');
-  const arr = contents.split(/\r?\n/).map(x => Number(x))
-  return arr;
-};
-
-const original = readFile();
+const original = readInstructions('day1/input.txt').map(x => Number(x));
 
 function getAllIndexes(arr, val) {
   var indexes = [], i;
@@ -34,7 +28,7 @@ const afterpush = chunk(original).map(
   x => x.reduce((partialSum, a) => partialSum + a, 0)
 );
 
-const sortedArr = afterpush.sort(function(a, b) {
+const sortedArr = afterpush.sort(function (a, b) {
   return a - b;
 }).reverse();
 
@@ -42,4 +36,4 @@ const sortedArr = afterpush.sort(function(a, b) {
 console.log(sortedArr[0]);
 
 //part2
-console.log(sortedArr[0]+sortedArr[1]+sortedArr[2]);
+console.log(sortedArr[0] + sortedArr[1] + sortedArr[2]);

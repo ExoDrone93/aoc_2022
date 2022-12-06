@@ -1,12 +1,6 @@
-const { readFileSync } = require('fs');
+const { readInstructions } = require('../Utils/readFile.js');
 
-const readFile = () => {
-  const contents = readFileSync('day4/input.txt', 'utf-8');
-  const arr = contents.split(/\r?\n/).map(x => x.split(/,|-/));
-  return arr;
-};
-
-const original = readFile();
+const original = readInstructions('day4/input.txt').map(x => x.split(/,|-/));
 
 //part1
 const shiftTotalOverlap = (array) => {
