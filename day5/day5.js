@@ -1,19 +1,7 @@
-const { readFileSync } = require('fs');
+const { readInstructions } = require('../Utils/readFile.js');
 
-const readInstructions = () => {
-  const contents = readFileSync('day5/input-instructions.txt', 'utf-8');
-  const arr = contents.split(/\r?\n/).map(x => x.split(/ /));
-  return arr;
-};
-
-const readInitialState = () => {
-  const contents = readFileSync('day5/input-stacks.txt', 'utf-8');
-  const arr = contents.split(/\r?\n/);
-  return arr;
-};
-
-const initialStacks = readInitialState();
-const instructions = readInstructions();
+const initialStacks = readInstructions('day5/input-stacks.txt');
+const instructions = readInstructions('day5/input-instructions.txt').map(x => x.split(/ /));
 
 const getInput = (array) => {
   const inputs = [];
@@ -49,7 +37,7 @@ const columnsToArrays = (array) => {
 
 const moves = (array) => {
   const manual = [];
-  array.map(x => {manual.push([Number(x[1]), Number(x[3]), Number(x[5])])});
+  array.map(x => { manual.push([Number(x[1]), Number(x[3]), Number(x[5])]) });
   return manual;
 };
 

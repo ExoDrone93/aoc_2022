@@ -1,12 +1,6 @@
-const { readFileSync } = require('fs');
+const { readInstructions } = require('../Utils/readFile.js');
 
-const readFile = () => {
-  const contents = readFileSync('day2/input.txt', 'utf-8');
-  const arr = contents.split(/\r?\n/);
-  return arr;
-};
-
-const original = readFile();
+const original = readInstructions('day2/input.txt');
 
 const totalPoints = (array) => {
   let total = 0;
